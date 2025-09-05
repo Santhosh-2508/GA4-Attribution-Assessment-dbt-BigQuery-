@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_ga4_events
+    description: "Flattened GA4 events table"
+    columns:
+      - name: user_pseudo_id
+        description: "GA4 user identifier"
+        tests: [not_null]
+      - name: event_ts
+        description: "Event timestamp"
+        tests: [not_null]
+      - name: event_name
+        description: "Event type"
+        tests: [not_null]
