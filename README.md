@@ -2,6 +2,7 @@
 
 This project implements **First-Click** and **Last-Click attribution** using the GA4 public dataset in BigQuery, orchestrated with dbt. It also includes a small streaming demo and a dashboard prototype.
 
+Day 1: staging models + tests; architecture doc
 
 - **Source**: GA4 public dataset (`bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`)
 - **Warehouse**: BigQuery
