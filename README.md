@@ -33,3 +33,16 @@ Day 1: staging models + tests; architecture doc
    dbt run
    dbt test
    dbt docs generate && dbt docs serve
+
+Day 2:
+
+## Datasets (BigQuery)
+- **raw**: landing/raw data (ingested by jobs/streaming)
+- **staging**: cleaned staging models
+- **marts**: star schema (facts/dims)
+
+
+
+
+
+
