@@ -1,0 +1,15 @@
+name: 'gcp_assessment'          # Your project name
+version: '1.0'
+config-version: 2
+
+profile: 'my_bigquery_profile'  # Make sure this matches your profile name
+
+source-paths: ["models"]        # Path to your models
+macro-paths: ["macros"]         # Path to your macros
+
+models:
+  gcp_assessment:               # Must match project name
+    demo:
+      +materialized: table      # default materialization for demo folder
+      marts:
+        +materialized: view     # materialization for marts folder

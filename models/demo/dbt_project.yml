@@ -1,0 +1,13 @@
+name: 'demo'
+version: '1.0.0'
+config-version: 2
+
+profile: 'demo'  # must match your ~/.dbt/profiles.yml
+
+model-paths: ["models"]
+
+models:
+  demo:
+    +materialized: view   # default materialization
+    marts:
+      +materialized: table

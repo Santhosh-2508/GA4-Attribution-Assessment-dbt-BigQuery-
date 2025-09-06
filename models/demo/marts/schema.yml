@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: demo
+    schema: demo
+    tables:
+      - name: events_streaming
+        description: "Raw streamed events from GA4 demo pipeline"
+
+models:
+  - name: stg_events
+    description: "Cleaned staging model from demo.events_streaming"
+    columns:
+      - name: event_id
+        tests: [not_null, unique]
+      - name: user_pseudo_id
+        tests: [not_null]
+
+  - name: mart_first_touch
+    description: "First-touch attribution per user"
+    columns:
+      - name: user_pseudo_id
+        tests: [not_null, unique]
+
+  - name: mart_last_touch
+    description: "Last-touch attribution per user"
+    columns:
+      - name: user_pseudo_id
+        tests: [not_null, unique]
