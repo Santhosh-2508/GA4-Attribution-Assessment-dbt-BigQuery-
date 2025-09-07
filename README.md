@@ -41,6 +41,12 @@ Day 2:
 - **staging**: cleaned staging models
 - **marts**: star schema (facts/dims)
 
+Day 3:
+•	Streaming demo: how to run the Python script; schema; dedupe logic
+•	Dashboard: link + how to rebuild
+•	Monitoring: BigQuery slot usage, dbt run artifacts, Cloud Logging
+•	Costs: partitioned tables, clustered on event_date, limit columns scanned; avoid SELECT *
+•	Known issues: gaps in public data, timezone notes, late events
 
 
 
