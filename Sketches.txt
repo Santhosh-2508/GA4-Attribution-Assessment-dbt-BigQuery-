@@ -1,0 +1,36 @@
+Sketch 1: Pipeline Architecture
+
+Draw boxes + arrows (keep simple):
+
+Flow:
+GA4 Public Dataset → BigQuery (staging) → dbt (int_ + mart_) → BigQuery marts → Dashboard (Looker Studio)
+
+Include:
+
+GA4 events_* (public dataset)
+
+Staging (stg_ga4_events)
+
+Intermediate (int_touches)
+
+Marts (mart_attribution, etc.)
+
+Streaming Demo (events_streaming)
+
+Dashboard
+
+2: Model Lineage
+
+Show dbt model dependencies:
+
+Sources → stg_ → int_ → mart_ → Dashboard
+
+Example:
+
+ga4.events_* → stg_ga4_events
+
+stg_ga4_events → int_touches
+
+int_touches + stg_ga4_events → mart_attribution
+
+mart_attribution → mart_attribution_timeseries & mart_channel_breakdown
